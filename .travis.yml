@@ -1,0 +1,15 @@
+language: c++
+script:
+matrix: 
+  include: 
+  - env: TARGET_OS=android
+    os: linux
+    script:
+    - wget https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip
+    - unzip android-ndk-r14b-linux-x86_64.zip > /tmp/nul
+    - ./cmakeify --group-id com.github.jomof --artifact-id sqlite --target-version ${TRAVIS_TAG:-0.0.0}
+    - ./cdep
+    - ./cmakeify -wf .cdep/examples/cmake
+
+
+
