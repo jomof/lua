@@ -1,0 +1,8 @@
+targets: [android]
+badges: no
+includes: [include]
+android:
+  ndk:
+    runtimes: [c++, gnustl, stlport]
+    platforms: [12, 21]
+

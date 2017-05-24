@@ -1,0 +1,24 @@
+coordinate:
+  groupId: com.github.jomof
+  artifactId: lua
+  version: ${version}
+interfaces:
+  headers:
+    file: ${source}/headers/...
+android:
+  archives:
+  - file: ${source}/obj/local/x86/...
+  - file: ${source}/obj/local/x86_64/...
+  - file: ${source}/obj/local/arm64-v8a/...
+  - file: ${source}/obj/local/armeabi-v7a/...
+  - file: ${source}/obj/local/armeabi/...
+
+example: |
+  #include <lua/lua.h>
+
+  int main() {
+    lua_State *state = lua_newstate(0, 0);
+    lua_close(state);
+    return 0;
+  }
+   

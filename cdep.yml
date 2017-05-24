@@ -1,5 +1,4 @@
-builders: [cmake]
+builders: [cmake, cmakeExamples]
 
 dependencies:
-# Uncomment next line to get header-only boost
-#- compile: com.github.jomof:boost:1.0.63-rev10
+- compile: .cdep/fullfill/output/layout/cdep-manifest.yml
