@@ -13,6 +13,7 @@ matrix:
     - ./cdep fullfill . ${TRAVIS_TAG:-0.0.0} cdep-manifest.yml
     - ./cdep
     - ./cmakeify -wf .cdep/examples/cmake
+    - .cmakeify/tools/android-ndk-r13b/ndk-build NDK_PROJECT_PATH=.cdep/examples/ndk-build
     - git clone https://github.com/jomof/tools
     - tools/github_release_folder jomof lua .cdep/fullfill/output/layout
 

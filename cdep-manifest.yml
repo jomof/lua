@@ -14,8 +14,10 @@ android:
   - file: ${source}/obj/local/armeabi/...
 
 example: |
-  #include <lua/lua.h>
-
+  extern "C" {
+    #include <lua/lua.h>
+  }
+  
   int main() {
     lua_State *state = lua_newstate(0, 0);
     lua_close(state);

@@ -1,4 +1,4 @@
-builders: [cmake, cmakeExamples]
+builders: [cmake, cmakeExamples, ndk-build, ndk-build-examples]
 
 dependencies:
 - compile: .cdep/fullfill/output/layout/cdep-manifest.yml
